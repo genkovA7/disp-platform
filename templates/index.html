@@ -7,54 +7,81 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f7fc;
-      color: #222;
+      background: linear-gradient(135deg, #003366, #0066cc);
+      color: white;
     }
 
     header {
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
-      background-color: #003366;
-      padding: 20px 40px;
-      color: white;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
     }
 
     header img {
-      height: 50px;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 56px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+
+    p.description {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
     }
 
     nav button {
-      margin-left: 20px;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 5px;
+      padding: 15px 30px;
+      border-radius: 50px;
       background-color: #ffffff;
       color: #003366;
       font-weight: bold;
+      font-size: 18px;
+      border: none;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     nav button:hover {
-      background-color: #e0e0e0;
+      background-color: #003366;
+      color: #ffffff;
+      transform: translateY(-4px);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     }
 
-    main {
+    footer {
+      background-color: #1d1f27;
+      padding: 20px;
       text-align: center;
-      margin-top: 100px;
-      padding: 0 40px;
+      color: white;
     }
 
-    main h1 {
-      font-size: 42px;
-      color: #003366;
-    }
-
-    main p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: 20px auto;
+    footer p {
+      margin: 0;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -62,19 +89,23 @@
 
   <header>
     <img src="{{ url_for('static', filename='logo.png') }}" alt="D.I.S.P. Logo" />
+    <h1>Welcome to D.I.S.P.</h1>
+    <p class="subtitle">Dispatcher Intelligent Support Platform</p>
+    <p class="description">
+      D.I.S.P. is a cutting-edge platform designed to optimize logistics operations through intelligent data analysis,
+      automated scorecard reporting, and real-time performance tracking. 
+      It empowers logistics managers with actionable insights to streamline processes, enhance efficiency, and improve customer satisfaction.
+    </p>
+    
     <nav>
       <button onclick="window.location.href='mailto:Simeon.genkov@a7tradelogistics.de'">Contact Us</button>
       <button onclick="window.location.href='/login'">Login</button>
     </nav>
   </header>
 
-  <main>
-    <h1>Welcome to D.I.S.P.</h1>
-    <p>
-      The Dispatcher Intelligent Support Platform (D.I.S.P.) provides real-time performance analysis,
-      automated scorecard reports, and smart tools to support decision-making in modern logistics operations.
-    </p>
-  </main>
+  <footer>
+    <p>&copy; 2025 D.I.S.P. - Dispatcher Intelligent Support Platform | All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>
