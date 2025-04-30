@@ -49,4 +49,5 @@ def top_5():
     return render_template('top_5.html')  # Ще добавим съдържание за топ 5
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), debug=True)
+    # Настройване на Flask да слуша на 0.0.0.0 и да използва правилния порт
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
