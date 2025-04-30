@@ -1,11 +1,11 @@
 from flask import Flask, render_template
 import os
 
-app = Flask(__name__, template_folder='templates')  # <-- Това е важно!
+app = Flask(__name__, template_folder='templates')  # Уточняваме templates
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html')  # Зарежда шаблона
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
