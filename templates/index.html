@@ -9,51 +9,55 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #003366, #0066cc);
       color: white;
-    }
-
-    header {
+      text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       flex-direction: column;
-      text-align: center;
-      padding: 20px;
     }
 
     header img {
-      max-width: 300px;
-      margin-bottom: 20px;
+      max-width: 350px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.1);
     }
 
     h1 {
-      font-size: 56px;
+      font-size: 60px;
       color: white;
-      margin-bottom: 10px;
+      margin: 20px 0;
+      font-weight: bold;
+      text-transform: uppercase;
     }
 
     p.subtitle {
-      font-size: 24px;
-      font-weight: 300;
+      font-size: 28px;
+      font-weight: lighter;
+      color: white;
       margin-bottom: 40px;
     }
 
     p.description {
-      font-size: 18px;
+      font-size: 20px;
       max-width: 800px;
       margin: 20px auto;
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     nav {
       display: flex;
-      gap: 20px;
+      gap: 40px;
       justify-content: center;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     nav button {
-      padding: 15px 30px;
+      padding: 15px 40px;
       border-radius: 50px;
       background-color: #ffffff;
       color: #003366;
@@ -62,20 +66,19 @@
       border: none;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     }
 
     nav button:hover {
       background-color: #003366;
-      color: #ffffff;
-      transform: translateY(-4px);
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
     }
 
     footer {
       background-color: #1d1f27;
       padding: 20px;
-      text-align: center;
       color: white;
     }
 
@@ -93,7 +96,7 @@
     <p class="subtitle">Dispatcher Intelligent Support Platform</p>
     <p class="description">
       D.I.S.P. is a cutting-edge platform designed to optimize logistics operations through intelligent data analysis,
-      automated scorecard reporting, and real-time performance tracking. 
+      automated scorecard reporting, and real-time performance tracking.
       It empowers logistics managers with actionable insights to streamline processes, enhance efficiency, and improve customer satisfaction.
     </p>
     
